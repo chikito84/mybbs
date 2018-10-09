@@ -8,7 +8,7 @@
     <h1>トピック一覧</h1>
     <ul>
       <% @topics.each do |topic| %>
-        <li><%= link_to topic.title, topics_show_path(topic.id) %></li>
+        <li><%= link_to topic.title, topics_show_path(topic.id) %><%= link_to '[削除]', topics_delete_path(topic.id), method: :delete, data: {confirm: "削除しますか？"} %></li>
       <% end %>
     </ul>
 
