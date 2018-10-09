@@ -11,5 +11,11 @@
         <li><%= link_to topic.title, topics_show_path(topic.id) %></li>
       <% end %>
     </ul>
+
+    <h1>トピック新規登録</h1>
+    <%= form_for @newTopic, :url => {:action => 'create'} do |f| %>
+      <%= f.text_field :title %>
+      <%= f.submit "トピック作成"%>
+    <% end %>
   </body>
 <html>
