@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get 'topics/show/:id', to: 'topics#show', as: 'topics_show'
   post 'topics/create', to: 'topics#create'
   delete 'topics/delete/:id', to: 'topics#delete', as: 'topics_delete'
+  post 'posts/create', to: 'post#create', as: 'post_create'
 end
